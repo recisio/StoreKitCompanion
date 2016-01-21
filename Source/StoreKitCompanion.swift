@@ -238,6 +238,16 @@ public class StoreKitCompanion: NSObject {
     // MARK: Validating receipts
 
     /**
+        Returns App Store Receipt data as NSData if present or nil
+    */
+    public func appStoreReceiptData() -> NSData? {
+        if let appStoreReceiptURL = NSBundle.mainBundle().appStoreReceiptURL, receiptData = NSData(contentsOfURL: appStoreReceiptURL) {
+            return receiptData
+        }
+        return nil
+    }
+
+    /**
         Sends the App Store Receipt data using a HTTP POST request asynchronously.
 
         - parameter completion: The closure to handle the request completion
@@ -253,12 +263,7 @@ public class StoreKitCompanion: NSObject {
         - parameter completion: The closure to handle the request completion
     */
     public func sendReceiptWithDescriptor(descriptor: ReceiptValidationRequestDescriptor, completion: (responseData: NSData?, error: NSError?) -> Void) {
-        guard let appStoreReceiptURL = NSBundle.mainBundle().appStoreReceiptURL else {
-            let error = NSError(domain: StoreKitCompanion.StoreKitCompanionErrorDomain, code: ErrorCodes.NoReceiptData.rawValue, userInfo: nil)
-            completion(responseData: nil, error: error)
-            return
-        }
-        guard let receiptData = NSData(contentsOfURL: appStoreReceiptURL) else {
+        guard let receiptData = self.appStoreReceiptData() else {
             let error = NSError(domain: StoreKitCompanion.StoreKitCompanionErrorDomain, code: ErrorCodes.NoReceiptData.rawValue, userInfo: nil)
             completion(responseData: nil, error: error)
             return
