@@ -69,6 +69,16 @@ StoreKitCompanion.sharedInstance.transactionsUpdateHandler = { queue, transactio
 StoreKitCompanion.sharedInstance.addPaymentForProductIdentifier("com.mycompany.MyKillerProduct")
 ```
 
+### Restoring previous transactions
+
+You can restore completed transactions by calling `restoreCompletedTransactionsWithUsername(_:)`.  
+You may also provide an optional username.  
+Callbacks that you set are called in response to the restoration request.
+
+```swift
+StoreKitCompanion.restoreCompletedTransactionsWithUsername()
+```
+
 ### Validating the App Store Receipt
 
 Details about App Store receipt validation can be found on [Apple's website](https://developer.apple.com/library/mac/releasenotes/General/ValidateAppStoreReceipt/Introduction.html).
