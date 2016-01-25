@@ -234,6 +234,21 @@ public class StoreKitCompanion: NSObject {
         SKPaymentQueue.defaultQueue().addPayment(payment)
         return true
     }
+    
+    // MARK: Restoring purchases
+    
+    /**
+        Asks the default payment queue to restore completed transactions
+
+        - parameter username:   An optional opaque identifier for the user's account, which is nil by default
+    */
+    public func restoreCompletedTransactionsWithUsername(username: String? = nil) {
+        if let user = username {
+            SKPaymentQueue.defaultQueue().restoreCompletedTransactionsWithApplicationUsername(user)
+        } else {
+            SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
+        }
+    }
 
     // MARK: Validating receipts
 
