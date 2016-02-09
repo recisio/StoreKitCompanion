@@ -4,9 +4,9 @@ notifications:
   email: false
 env:
   global:
-  - WORKSPACE=StoreKitCompanionDemo/StoreKitCompanionDemo.xcworkspace
-  - IOS_FRAMEWORK_SCHEME="StoreKitCompanion iOS"
-  - OSX_FRAMEWORK_SCHEME="StoreKitCompanion OSX"
+  - WORKSPACE=Demo/StoreKitCompanionDemo/StoreKitCompanionDemo.xcworkspace
+  - IOS_FRAMEWORK_SCHEME="StoreKitCompanionDemo iOS"
+  - OSX_FRAMEWORK_SCHEME="StoreKitCompanionDemo OSX"
   - IOS_SDK=iphonesimulator9.2
   - OSX_SDK=macosx10.11
   matrix:
