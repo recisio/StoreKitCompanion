@@ -434,6 +434,8 @@ extension StoreKitCompanion: SKRequestDelegate, SKProductsRequestDelegate {
             return
         }
 
+        self.products = response.products
+
         callback(response.products, response.invalidProductIdentifiers)
     }
 
