@@ -434,7 +434,7 @@ extension StoreKitCompanion: SKRequestDelegate, SKProductsRequestDelegate {
             return
         }
         #if os(OSX)
-        guard let products = products = response.products else {
+        guard let products = response.products else {
             return
         }
         #else
