@@ -430,11 +430,11 @@ extension StoreKitCompanion: SKRequestDelegate, SKProductsRequestDelegate {
         defer {
             self.clearProductsRequestStuff()
         }
-        guard let callback = self.productsRequestCompletion else {
+        guard let callback = self.productsRequestCompletion, products = response.products else {
             return
         }
 
-        self.products = response.products
+        self.products = products
 
         callback(response.products, response.invalidProductIdentifiers)
     }
