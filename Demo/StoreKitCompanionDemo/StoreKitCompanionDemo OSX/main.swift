@@ -23,4 +23,4 @@
 import Cocoa
 
 StoreKitCompanion.sharedInstance.refreshReceipt()
-NSApplicationMain(Process.argc, Process.unsafeArgv)
+let _ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
