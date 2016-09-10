@@ -94,8 +94,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		61391E331C4FBE00002E35AC /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61391E491C4FBE24002E35AC /* Example macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61391E331C4FBE00002E35AC /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61391E491C4FBE24002E35AC /* macOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2AC29F51D847D1D004EC6AC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2AC29F61D847D1D004EC6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2AC29F81D847D1D004EC6AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 		61391E1E1C4FBD9A002E35AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61391E331C4FBE00002E35AC /* Example iOS.app */,
-				61391E491C4FBE24002E35AC /* Example macOS.app */,
+				61391E331C4FBE00002E35AC /* iOS Example.app */,
+				61391E491C4FBE24002E35AC /* macOS Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,9 +190,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		61391E321C4FBE00002E35AC /* Example iOS */ = {
+		61391E321C4FBE00002E35AC /* iOS Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61391E421C4FBE00002E35AC /* Build configuration list for PBXNativeTarget "Example iOS" */;
+			buildConfigurationList = 61391E421C4FBE00002E35AC /* Build configuration list for PBXNativeTarget "iOS Example" */;
 			buildPhases = (
 				61391E2F1C4FBE00002E35AC /* Sources */,
 				61391E301C4FBE00002E35AC /* Frameworks */,
@@ -205,14 +205,14 @@
 			dependencies = (
 				E2AC2A231D847D83004EC6AC /* PBXTargetDependency */,
 			);
-			name = "Example iOS";
+			name = "iOS Example";
 			productName = "StoreKitCompanionDemo iOS";
-			productReference = 61391E331C4FBE00002E35AC /* Example iOS.app */;
+			productReference = 61391E331C4FBE00002E35AC /* iOS Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		61391E481C4FBE24002E35AC /* Example macOS */ = {
+		61391E481C4FBE24002E35AC /* macOS Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61391E551C4FBE24002E35AC /* Build configuration list for PBXNativeTarget "Example macOS" */;
+			buildConfigurationList = 61391E551C4FBE24002E35AC /* Build configuration list for PBXNativeTarget "macOS Example" */;
 			buildPhases = (
 				61391E451C4FBE24002E35AC /* Sources */,
 				61391E461C4FBE24002E35AC /* Frameworks */,
@@ -225,9 +225,9 @@
 			dependencies = (
 				E2AC2A281D847D88004EC6AC /* PBXTargetDependency */,
 			);
-			name = "Example macOS";
+			name = "macOS Example";
 			productName = "StoreKitCompanionDemo OSX";
-			productReference = 61391E491C4FBE24002E35AC /* Example macOS.app */;
+			productReference = 61391E491C4FBE24002E35AC /* macOS Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -270,8 +270,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				61391E321C4FBE00002E35AC /* Example iOS */,
-				61391E481C4FBE24002E35AC /* Example macOS */,
+				61391E321C4FBE00002E35AC /* iOS Example */,
+				61391E481C4FBE24002E35AC /* macOS Example */,
 			);
 		};
 /* End PBXProject section */
@@ -587,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61391E421C4FBE00002E35AC /* Build configuration list for PBXNativeTarget "Example iOS" */ = {
+		61391E421C4FBE00002E35AC /* Build configuration list for PBXNativeTarget "iOS Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61391E431C4FBE00002E35AC /* Debug */,
@@ -596,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61391E551C4FBE24002E35AC /* Build configuration list for PBXNativeTarget "Example macOS" */ = {
+		61391E551C4FBE24002E35AC /* Build configuration list for PBXNativeTarget "macOS Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61391E561C4FBE24002E35AC /* Debug */,

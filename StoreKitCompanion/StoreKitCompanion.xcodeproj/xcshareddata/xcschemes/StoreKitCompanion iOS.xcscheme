@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E2AC29B41D847C24004EC6AC"
-               BuildableName = "StoreKitCompanion iOS.framework"
+               BuildableName = "StoreKitCompanion.framework"
                BlueprintName = "StoreKitCompanion iOS"
                ReferencedContainer = "container:StoreKitCompanion.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2AC29B41D847C24004EC6AC"
-            BuildableName = "StoreKitCompanion iOS.framework"
+            BuildableName = "StoreKitCompanion.framework"
             BlueprintName = "StoreKitCompanion iOS"
             ReferencedContainer = "container:StoreKitCompanion.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2AC29B41D847C24004EC6AC"
-            BuildableName = "StoreKitCompanion iOS.framework"
+            BuildableName = "StoreKitCompanion.framework"
             BlueprintName = "StoreKitCompanion iOS"
             ReferencedContainer = "container:StoreKitCompanion.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2AC29B41D847C24004EC6AC"
-            BuildableName = "StoreKitCompanion iOS.framework"
+            BuildableName = "StoreKitCompanion.framework"
             BlueprintName = "StoreKitCompanion iOS"
             ReferencedContainer = "container:StoreKitCompanion.xcodeproj">
          </BuildableReference>
