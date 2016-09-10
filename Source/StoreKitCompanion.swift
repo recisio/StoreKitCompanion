@@ -22,9 +22,8 @@
 
 import Foundation
 import StoreKit
-//import Alamofire
 
-// MARK: Typealiases for StoreKitCompanion
+// MARK: - Typealiases for StoreKitCompanion
 
 extension StoreKitCompanion {
 
@@ -46,58 +45,60 @@ extension StoreKitCompanion {
 
 }
 
-open class StoreKitCompanion: NSObject {
-
-    // MARK: Notification Names
+public class StoreKitCompanion: NSObject {
 
     /**
         The name of the notification sent when the payment queue finished to restore completed transactions.
         User info dictionary contains a reference to the `SKPaymentQueue` object.
     */
-    open static let PaymentQueueDidFinishRestoringCompletedTransactions  = "SKCPaymentQueueDidFinishRestoringCompletedTransactions"
+    public static let PaymentQueueDidFinishRestoringCompletedTransactions  = "SKCPaymentQueueDidFinishRestoringCompletedTransactions"
+
     /**
         The name of the notification sent when transactions are updated.
         User info dictionary contains a reference to the `SKPaymentQueue` object and an array of `SKPaymentTransaction` objects.
     */
-    open static let PaymentQueueDidUpdateTransactions                    = "SKCPaymentQueueDidUpdateTransactions"
+    public static let PaymentQueueDidUpdateTransactions                    = "SKCPaymentQueueDidUpdateTransactions"
+
     /**
         The name of the notification sent when transactions are removed.
         User info dictionary contains a reference to the `SKPaymentQueue` object and an array of `SKPaymentTransaction` objects.
     */
-    open static let PaymentQueueDidRemoveTransactions                    = "SKCPaymentQueueDidRemoveTransactions"
+    public static let PaymentQueueDidRemoveTransactions                    = "SKCPaymentQueueDidRemoveTransactions"
+
     /**
         The name of the notification sent when downloads are updated
         User info dictionary contains a reference to the `SKPaymentQueue` object and an array of `SKDownload` objects.
     */
-    open static let PaymentQueueDidUpdateDownloads                       = "SKCPaymentQueueDidUpdateDownloads"
+    public static let PaymentQueueDidUpdateDownloads                       = "SKCPaymentQueueDidUpdateDownloads"
+
     /**
         The name of the notification sent when the payment queue fails to restore completed transactions.
         User info dictionary contains a reference to the `SKPaymentQueue` object and a reference to the `NSError` object.
     */
-    open static let PaymentQueueDidFailRestoringCompletedTransactions    = "SKCPaymentQueueDidFailRestoringCompletedTransactions"
+    public static let PaymentQueueDidFailRestoringCompletedTransactions    = "SKCPaymentQueueDidFailRestoringCompletedTransactions"
 
     // MARK: User Info Keys
 
     /**
         The key for the payment queue (`SKPaymentQueue`) in user info dictionaries
     */
-    open static let PaymentQueueKey = "PaymentQueue"
+    public static let PaymentQueueKey = "PaymentQueue"
     /**
         The key for an array of transactions (`SKPaymentTransaction`) in user info dictionaries
     */
-    open static let TransactionsKey = "Transactions"
+    public static let TransactionsKey = "Transactions"
     /**
         The key for an array of downloads (`SKDownload`) in user info dictionaries
     */
-    open static let DownloadsKey    = "Downloads"
+    public static let DownloadsKey    = "Downloads"
     /**
         The key for an error (`NSError`) in user info dictionaries
     */
-    open static let ErrorKey        = "Error"
+    public static let ErrorKey        = "Error"
 
     // MARK: Error Domains
 
-    open static let StoreKitCompanionErrorDomain = "com.recisio.StoreKitCompanion.ErrorDomain"
+    public static let StoreKitCompanionErrorDomain = "com.recisio.StoreKitCompanion.ErrorDomain"
 
     // MARK: Error Codes
 
@@ -111,35 +112,35 @@ open class StoreKitCompanion: NSObject {
     /**
         Handles successful completed transactions restoration
     */
-    open var completedTransactionsRestorationSuccessHandler: CompletedTransactionsRestoreCompletion?
+    public var completedTransactionsRestorationSuccessHandler: CompletedTransactionsRestoreCompletion?
     /**
         Handles completed transaction restoration failure
     */
-    open var completedTransactionsRestorationFailureHandler: CompletedTransactionsRestoreFailure?
+    public var completedTransactionsRestorationFailureHandler: CompletedTransactionsRestoreFailure?
     /**
         Handles successful downloads restoration
     */
-    open var downloadsUpdateSuccessHandler: DownloadsUpdateCompletion?
+    public var downloadsUpdateSuccessHandler: DownloadsUpdateCompletion?
     /**
         Handles transaction updates
     */
-    open var transactionsUpdateHandler: TransactionsUpdateCompletion?
+    public var transactionsUpdateHandler: TransactionsUpdateCompletion?
     /**
         Handles transaction removals
     */
-    open var transactionsRemovalHandler: TransactionsRemovalCompletion?
+    public var transactionsRemovalHandler: TransactionsRemovalCompletion?
 
     /**
         The URL string for App Store Receipt validation
     */
-    open var validationURLString: String?
+    public var validationURLString: String?
 
     // MARK: Singleton
 
     /**
     The shared store kit companion
     */
-    open static let sharedInstance = StoreKitCompanion()
+    public static let sharedInstance = StoreKitCompanion()
 
     // MARK: Lifecycle
 
@@ -159,7 +160,7 @@ open class StoreKitCompanion: NSObject {
         On OS X, checks if the receipt is avalable and exits with code 173 if not
         On iOS, starts a new `SKReceiptRefreshRequest`
     */
-    open func refreshReceipt() {
+    public func refreshReceipt() {
         #if os(OSX)
         guard let appStoreReceiptURL = Bundle.main.appStoreReceiptURL else {
             return
@@ -186,7 +187,7 @@ open class StoreKitCompanion: NSObject {
         - parameter completion:     Called when the product request succeed
         - parameter failure:        Called when the product request fail, if provided
     */
-    open func fetchProductsWithIdentifiers(_ identifiers: Set<String>, completion: @escaping ProductsResult, failure: Failure? = nil) {
+    public func fetchProductsWithIdentifiers(_ identifiers: Set<String>, completion: @escaping ProductsResult, failure: Failure? = nil) {
         guard self.productsRequest == nil else {
             return
         }
@@ -206,7 +207,7 @@ open class StoreKitCompanion: NSObject {
 
         - returns:  A Bool telling whether payments can be made
     */
-    open func canMakePayments() -> Bool {
+    public func canMakePayments() -> Bool {
         return SKPaymentQueue.canMakePayments()
     }
 
@@ -215,10 +216,10 @@ open class StoreKitCompanion: NSObject {
 
         - parameter productID:  The identifier of the product to buy
         - parameter quantity:   The quantity to buy, defaults to 1
-     
+
         - returns: A Bool telling whether the payment is successfuly submitted to the queue
     */
-    open func addPaymentForProductIdentifier(_ productID: String, quantity: Int = 1) -> Bool {
+    public func addPaymentForProductIdentifier(_ productID: String, quantity: Int = 1) -> Bool {
         guard quantity > 0, let product = self.productWithIdentifier(productID) else {
             return false
         }
@@ -235,15 +236,15 @@ open class StoreKitCompanion: NSObject {
         SKPaymentQueue.default().add(payment)
         return true
     }
-    
+
     // MARK: Restoring purchases
-    
+
     /**
         Asks the default payment queue to restore completed transactions
 
         - parameter username:   An optional opaque identifier for the user's account, which is nil by default
     */
-    open func restoreCompletedTransactionsWithUsername(_ username: String? = nil) {
+    public func restoreCompletedTransactionsWithUsername(_ username: String? = nil) {
         if let user = username {
             SKPaymentQueue.default().restoreCompletedTransactions(withApplicationUsername: user)
         } else {
@@ -256,7 +257,7 @@ open class StoreKitCompanion: NSObject {
     /**
         Returns App Store Receipt data as NSData if present or nil
     */
-    open func appStoreReceiptData() -> Data? {
+    public func appStoreReceiptData() -> Data? {
         if let appStoreReceiptURL = Bundle.main.appStoreReceiptURL, let receiptData = try? Data(contentsOf: appStoreReceiptURL) {
             return receiptData
         }

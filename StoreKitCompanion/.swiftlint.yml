@@ -1,0 +1,5 @@
+line_length: 180
+disabled_rules:
+  - variable_name
+included:
+ - ../Source

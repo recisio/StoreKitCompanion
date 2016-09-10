@@ -20,22 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Cocoa
+import UIKit
 
-class ViewController: NSViewController {
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var window: UIWindow?
 
-        // Do any additional setup after loading the view.
+    // swiftlint:disable:next line_length
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        return true
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
 
 }
-
