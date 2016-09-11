@@ -3,7 +3,7 @@
 A lightweight wrapper for Apple's StoreKit, written in Swift.  
 
 [![CI Status](https://travis-ci.org/recisio/StoreKitCompanion.svg)](https://travis-ci.org/recisio/StoreKitCompanion)
-![Language](https://img.shields.io/badge/language-Swift%202.2-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/recisio/StoreKitCompanion.svg)](https://img.shields.io/cocoapods/v/StoreKitCompanion.svg)
 [![Platform](https://img.shields.io/cocoapods/p/StoreKitCompanion.svg?style=flat)](http://cocoadocs.org/docsets/StoreKitCompanion)
 [![License](https://img.shields.io/cocoapods/l/StoreKitCompanion.svg?style=flat)](http://cocoapods.org/pods/StoreKitCompanion)
