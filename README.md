@@ -5,6 +5,7 @@ A lightweight wrapper for Apple's StoreKit, written in Swift.
 [![CI Status](https://travis-ci.org/recisio/StoreKitCompanion.svg)](https://travis-ci.org/recisio/StoreKitCompanion)
 ![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/recisio/StoreKitCompanion.svg)](https://img.shields.io/cocoapods/v/StoreKitCompanion.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/StoreKitCompanion.svg?style=flat)](http://cocoadocs.org/docsets/StoreKitCompanion)
 [![License](https://img.shields.io/cocoapods/l/StoreKitCompanion.svg?style=flat)](http://cocoapods.org/pods/StoreKitCompanion)
 
@@ -13,7 +14,10 @@ A lightweight wrapper for Apple's StoreKit, written in Swift.
 ### CocoaPods
 
 Add `pod 'StoreKitCompanion'` to your Podfile and run `pod install`.
-For details about CocoaPods, please view [CocoaPods website](https://cocoapods.org).
+
+### Carthage
+
+Add `github "Recisio/StoreKitCompanion"` to your Cartfile.
 
 ### Swift Package Manager
 
