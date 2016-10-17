@@ -461,14 +461,14 @@ extension StoreKitCompanion: SKRequestDelegate, SKProductsRequestDelegate {
     #endif
 
     #if os(OSX)
-    public func request(request: SKRequest, didFailWithError error: NSError?) {
+    public func request(_ request: SKRequest, didFailWithError error: Error) {
         defer {
             self.clearProductsRequestStuff()
         }
         guard let callback = self.productsRequestFailure else {
             return
         }
-        callback(error)
+        callback(error as NSError?)
     }
     #elseif os(iOS)
     public func request(_ request: SKRequest, didFailWithError error: Error) {
