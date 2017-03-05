@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
 s.name            	= "StoreKitCompanion"
 s.module_name      	= "StoreKitCompanion"
-s.version          	= "1.0.1"
+s.version          	= "2.0.0"
 s.summary          	= "A lightweight wrapper for Apple's StoreKit, written in Swift."
 s.description      	= "A lightweight wrapper for Apple's StoreKit, written in Swift. For iOS and OS X"
 s.homepage         	= "https://github.com/recisio/StoreKitCompanion"
