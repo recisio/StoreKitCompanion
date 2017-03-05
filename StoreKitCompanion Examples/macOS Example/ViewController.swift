@@ -22,18 +22,10 @@
 
 import Cocoa
 
-class AppDelegate: NSObject, NSApplicationDelegate {
+class ViewController: NSViewController {
 
-
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
 
 }
-

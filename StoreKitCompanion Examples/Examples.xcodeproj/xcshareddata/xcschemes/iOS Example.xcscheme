@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "61391E321C4FBE00002E35AC"
-               BuildableName = "StoreKitCompanionDemo iOS.app"
-               BlueprintName = "StoreKitCompanionDemo iOS"
-               ReferencedContainer = "container:StoreKitCompanionDemo.xcodeproj">
+               BuildableName = "iOS Example.app"
+               BlueprintName = "iOS Example"
+               ReferencedContainer = "container:Examples.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61391E321C4FBE00002E35AC"
-            BuildableName = "StoreKitCompanionDemo iOS.app"
-            BlueprintName = "StoreKitCompanionDemo iOS"
-            ReferencedContainer = "container:StoreKitCompanionDemo.xcodeproj">
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:Examples.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61391E321C4FBE00002E35AC"
-            BuildableName = "StoreKitCompanionDemo iOS.app"
-            BlueprintName = "StoreKitCompanionDemo iOS"
-            ReferencedContainer = "container:StoreKitCompanionDemo.xcodeproj">
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:Examples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "61391E321C4FBE00002E35AC"
-            BuildableName = "StoreKitCompanionDemo iOS.app"
-            BlueprintName = "StoreKitCompanionDemo iOS"
-            ReferencedContainer = "container:StoreKitCompanionDemo.xcodeproj">
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:Examples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

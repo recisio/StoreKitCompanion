@@ -14,7 +14,6 @@ s.source           	= { :git => "https://github.com/recisio/StoreKitCompanion.gi
 
 # ―――  Spec tech  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-s.dependency                  'Alamofire'
 s.ios.deployment_target		= '8.0'
 s.osx.deployment_target 	= '10.10'
 

@@ -20,20 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import UIKit
+import XCTest
+@testable import StoreKitCompanion
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class StoreKitCompanion_iOSTests: XCTestCase {
+    
+    override func setUp() {
+        super.setUp()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func tearDown() {
+        super.tearDown()
     }
-
+    
+    func testExample() {
+        XCTAssertTrue(true)
+    }
 
 }
-
