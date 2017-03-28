@@ -25,6 +25,7 @@ import StoreKit
 
 // MARK: - Typealiases for StoreKitCompanion
 
+// swiftlint:disable file_length
 extension StoreKitCompanion {
 
     // MARK: Transaction Observer Callbacks
@@ -291,6 +292,7 @@ public class StoreKitCompanion: NSObject {
 //            return
 //        }
 //
+// swiftlint:disable:next line_length
 //        Alamofire.request(descriptor.HTTPMethod, urlString, parameters: descriptor.parametersWithReceiptData(receiptData), encoding: descriptor.encoding, headers: descriptor.headers).response { _, _, data, error in
 //            completion(responseData: data, error: error)
 //        }
@@ -373,7 +375,7 @@ extension StoreKitCompanion: SKPaymentTransactionObserver {
 
     public func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
         NotificationCenter.default.post(name: Notification.Name(rawValue: StoreKitCompanion.PaymentQueueDidFinishRestoringCompletedTransactions), object: self, userInfo: [
-            StoreKitCompanion.PaymentQueueKey : queue
+            StoreKitCompanion.PaymentQueueKey: queue
         ])
         if let handler = self.completedTransactionsRestorationSuccessHandler {
             handler(queue)
@@ -382,8 +384,8 @@ extension StoreKitCompanion: SKPaymentTransactionObserver {
 
     public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         NotificationCenter.default.post(name: Notification.Name(rawValue: StoreKitCompanion.PaymentQueueDidUpdateTransactions), object: self, userInfo: [
-            StoreKitCompanion.PaymentQueueKey : queue,
-            StoreKitCompanion.TransactionsKey : transactions
+            StoreKitCompanion.PaymentQueueKey: queue,
+            StoreKitCompanion.TransactionsKey: transactions
         ])
         if let handler = self.transactionsUpdateHandler {
             handler(queue, transactions)
@@ -392,8 +394,8 @@ extension StoreKitCompanion: SKPaymentTransactionObserver {
 
     public func paymentQueue(_ queue: SKPaymentQueue, removedTransactions transactions: [SKPaymentTransaction]) {
         NotificationCenter.default.post(name: Notification.Name(rawValue: StoreKitCompanion.PaymentQueueDidRemoveTransactions), object: self, userInfo: [
-            StoreKitCompanion.PaymentQueueKey : queue,
-            StoreKitCompanion.TransactionsKey : transactions
+            StoreKitCompanion.PaymentQueueKey: queue,
+            StoreKitCompanion.TransactionsKey: transactions
         ])
         if let handler = self.transactionsRemovalHandler {
             handler(queue, transactions)
@@ -402,8 +404,8 @@ extension StoreKitCompanion: SKPaymentTransactionObserver {
 
     public func paymentQueue(_ queue: SKPaymentQueue, updatedDownloads downloads: [SKDownload]) {
         NotificationCenter.default.post(name: Notification.Name(rawValue: StoreKitCompanion.PaymentQueueDidUpdateDownloads), object: self, userInfo: [
-            StoreKitCompanion.PaymentQueueKey : queue,
-            StoreKitCompanion.DownloadsKey    : downloads
+            StoreKitCompanion.PaymentQueueKey: queue,
+            StoreKitCompanion.DownloadsKey: downloads
         ])
         if let handler = self.downloadsUpdateSuccessHandler {
             handler(queue, downloads)
@@ -412,8 +414,8 @@ extension StoreKitCompanion: SKPaymentTransactionObserver {
 
     public func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
         NotificationCenter.default.post(name: Notification.Name(rawValue: StoreKitCompanion.PaymentQueueDidFailRestoringCompletedTransactions), object: self, userInfo: [
-            StoreKitCompanion.PaymentQueueKey : queue,
-            StoreKitCompanion.ErrorKey        : error
+            StoreKitCompanion.PaymentQueueKey: queue,
+            StoreKitCompanion.ErrorKey: error
         ])
         if let handler = self.completedTransactionsRestorationFailureHandler {
             handler(queue, error as NSError)
