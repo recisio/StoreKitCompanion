@@ -455,9 +455,7 @@ extension StoreKitCompanion: SKRequestDelegate, SKProductsRequestDelegate {
     #if os(iOS)
     public func requestDidFinish(_ request: SKRequest) {
         if request == self.receiptRequest {
-            defer {
-                self.clearReceiptRequestStuff()
-            }
+            self.clearReceiptRequestStuff()
         }
     }
     #endif
@@ -483,9 +481,7 @@ extension StoreKitCompanion: SKRequestDelegate, SKProductsRequestDelegate {
             }
             callback(error as NSError?)
         } else if request == self.receiptRequest {
-            defer {
-                self.clearReceiptRequestStuff()
-            }
+            self.clearReceiptRequestStuff()
         } else {
             print("Unknow request", request)
         }
