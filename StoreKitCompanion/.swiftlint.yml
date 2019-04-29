@@ -1,5 +1,5 @@
 line_length: 180
 disabled_rules:
-  - variable_name
+  - identifier_name
 included:
  - ../Source
