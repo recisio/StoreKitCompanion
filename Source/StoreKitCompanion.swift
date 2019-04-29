@@ -125,6 +125,7 @@ public class StoreKitCompanion: NSObject {
     /**
         Handles transaction updates
     */
+    @objc
     public var transactionsUpdateHandler: TransactionsUpdateCompletion?
     /**
         Handles transaction removals
@@ -188,6 +189,7 @@ public class StoreKitCompanion: NSObject {
         - parameter completion:     Called when the product request succeed
         - parameter failure:        Called when the product request fail, if provided
     */
+    @objc
     public func fetchProductsWithIdentifiers(_ identifiers: Set<String>, completion: @escaping ProductsResult, failure: Failure? = nil) {
         guard self.productsRequest == nil else {
             return
@@ -258,6 +260,7 @@ public class StoreKitCompanion: NSObject {
     /**
         Returns App Store Receipt data as NSData if present or nil
     */
+    @objc
     public func appStoreReceiptData() -> Data? {
         if let appStoreReceiptURL = Bundle.main.appStoreReceiptURL, let receiptData = try? Data(contentsOf: appStoreReceiptURL) {
             return receiptData
