@@ -141,7 +141,7 @@ public class StoreKitCompanion: NSObject {
     /**
     The shared store kit companion
     */
-    public static let sharedInstance = StoreKitCompanion()
+    @objc public static let sharedInstance = StoreKitCompanion()
 
     // MARK: Lifecycle
 
