@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode10.3
 notifications:
   email: false
 branches:
@@ -12,12 +12,12 @@ env:
   - WORKSPACE=StoreKitCompanion.xcworkspace
   - IOS_FRAMEWORK_SCHEME="StoreKitCompanion iOS"
   - MACOS_FRAMEWORK_SCHEME="StoreKitCompanion macOS"
-  - IOS_SDK=iphonesimulator10.0
-  - MACOS_SDK=macosx10.12
+  - IOS_SDK=iphonesimulator12.4
+  - MACOS_SDK=macosx10.14
   - EXAMPLE_SCHEME="iOS Example"
   matrix:
-    - DESTINATION="OS=10.0,name=iPhone 6S"         SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES"
-    - DESTINATION="OS=10.0,name=iPhone 5"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES"
+    - DESTINATION="OS=12.4,name=iPhone Xʀ"         SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES"
+    - DESTINATION="OS=12.4,name=iPhone Xs"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES"
     - DESTINATION="arch=x86_64"                    SCHEME="$MACOS_FRAMEWORK_SCHEME"   SDK="$OSX_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="NO"
 script:
   - set -o pipefail
