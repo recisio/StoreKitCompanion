@@ -162,6 +162,7 @@ public class StoreKitCompanion: NSObject {
         On OS X, checks if the receipt is avalable and exits with code 173 if not
         On iOS, starts a new `SKReceiptRefreshRequest`
     */
+    @objc
     public func refreshReceipt() {
         #if os(OSX)
         guard let appStoreReceiptURL = Bundle.main.appStoreReceiptURL else {
